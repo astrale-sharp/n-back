@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/icons/up-arrow.png" type="Texture" id=1]
+[ext_resource path="res://scenes/widgets/ReturnHomeButton.gd" type="Script" id=2]
+
+[node name="ReturnHomeButton" type="Button"]
+margin_right = 168.0
+margin_bottom = 124.0
+hint_tooltip = "RET_HOME_TOOLTIP"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource( 1 )
+flat = true
+icon_align = 1
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

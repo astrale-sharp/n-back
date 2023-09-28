@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/2022-08-20 16.04.43.ogg-65c8dc34f482443be18eeea4c4cbe54f.oggstr"
+
+[deps]
+
+source_file="res://assets/audacity/2022-08-20 16.04.43.ogg"
+dest_files=[ "res://.import/2022-08-20 16.04.43.ogg-65c8dc34f482443be18eeea4c4cbe54f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

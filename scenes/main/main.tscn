@@ -1,0 +1,344 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://new_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/main/main.gd" type="Script" id=2]
+[ext_resource path="res://scenes/main/TurnCounter.gd" type="Script" id=3]
+[ext_resource path="res://scenes/main/ScoreCounter.gd" type="Script" id=4]
+[ext_resource path="res://scenes/main/DebugPositionTrigger.gd" type="Script" id=5]
+[ext_resource path="res://assets/F.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/C.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/H.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/G.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/A.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/D.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/E.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets/B.wav" type="AudioStream" id=13]
+[ext_resource path="res://scenes/main/LabelPrinter.gd" type="Script" id=14]
+[ext_resource path="res://scenes/widgets/ReturnHomeButton.tscn" type="PackedScene" id=15]
+
+[node name="Panel" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Control" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+margin_right = 1024.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+custom_constants/separation = 10
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+margin_right = 132.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+alignment = 1
+
+[node name="N+" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 132.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "N + 1"
+
+[node name="Accelerate" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 40.0
+margin_right = 132.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "ACC"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 142.0
+margin_right = 275.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="NLabel" type="Label" parent="Control/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+margin_right = 133.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+valign = 1
+
+[node name="DelayLabel" type="Label" parent="Control/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+margin_top = 40.0
+margin_right = 133.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+valign = 1
+
+[node name="ScoreLabel" type="RichTextLabel" parent="Control/HBoxContainer"]
+unique_name_in_owner = true
+margin_left = 285.0
+margin_right = 684.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+bbcode_enabled = true
+tab_size = 2
+fit_content_height = true
+scroll_active = false
+
+[node name="RemainingTurnLabel" type="Label" parent="Control/HBoxContainer"]
+unique_name_in_owner = true
+margin_left = 694.0
+margin_right = 881.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+valign = 1
+
+[node name="Space" type="Label" parent="Control/HBoxContainer"]
+visible = false
+margin_left = 844.0
+margin_top = 28.0
+margin_right = 892.0
+margin_bottom = 52.0
+text = "    "
+
+[node name="ReturnHomeButton" parent="Control/HBoxContainer" instance=ExtResource( 15 )]
+margin_left = 891.0
+margin_right = 1024.0
+margin_bottom = 80.0
+size_flags_stretch_ratio = 0.5
+flat = false
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+unique_name_in_owner = true
+margin_top = 80.0
+margin_right = 1024.0
+margin_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 3
+
+[node name="ColorRect" type="ColorRect" parent="Control/GridContainer"]
+margin_right = 335.0
+margin_bottom = 127.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect2" type="ColorRect" parent="Control/GridContainer"]
+margin_left = 345.0
+margin_right = 680.0
+margin_bottom = 127.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect3" type="ColorRect" parent="Control/GridContainer"]
+margin_left = 690.0
+margin_right = 1024.0
+margin_bottom = 127.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect4" type="ColorRect" parent="Control/GridContainer"]
+margin_top = 137.0
+margin_right = 335.0
+margin_bottom = 264.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SpecialColorRect" type="ColorRect" parent="Control/GridContainer"]
+unique_name_in_owner = true
+margin_left = 345.0
+margin_top = 137.0
+margin_right = 680.0
+margin_bottom = 264.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect6" type="ColorRect" parent="Control/GridContainer"]
+margin_left = 690.0
+margin_top = 137.0
+margin_right = 1024.0
+margin_bottom = 264.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect7" type="ColorRect" parent="Control/GridContainer"]
+margin_top = 274.0
+margin_right = 335.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect8" type="ColorRect" parent="Control/GridContainer"]
+margin_left = 345.0
+margin_top = 274.0
+margin_right = 680.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect9" type="ColorRect" parent="Control/GridContainer"]
+margin_left = 690.0
+margin_top = 274.0
+margin_right = 1024.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Control"]
+margin_top = 480.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="PositionButton" type="Button" parent="Control/Buttons"]
+unique_name_in_owner = true
+margin_right = 341.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+toggle_mode = true
+text = "POS"
+
+[node name="SoundButton" type="Button" parent="Control/Buttons"]
+unique_name_in_owner = true
+margin_left = 341.0
+margin_right = 682.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+toggle_mode = true
+text = "SOUND"
+
+[node name="ColorButton" type="Button" parent="Control/Buttons"]
+unique_name_in_owner = true
+margin_left = 682.0
+margin_right = 1024.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+toggle_mode = true
+text = "COLOR"
+
+[node name="NumberButton" type="Button" parent="Control/Buttons"]
+unique_name_in_owner = true
+visible = false
+margin_left = 768.0
+margin_right = 1024.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = true
+text = "Number"
+
+[node name="DebugBox" type="HBoxContainer" parent="Control"]
+visible = false
+margin_top = 501.0
+margin_right = 1024.0
+margin_bottom = 599.0
+
+[node name="PositionTrigger" type="VBoxContainer" parent="Control/DebugBox"]
+margin_right = 1024.0
+margin_bottom = 98.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Control/DebugBox/PositionTrigger"]
+margin_right = 1024.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Should have clicked position last turn
+"
+align = 1
+
+[node name="ColorRect" type="ColorRect" parent="Control/DebugBox/PositionTrigger"]
+margin_top = 48.0
+margin_right = 1024.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 50, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="ScoreCounter" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource( 4 )
+
+[node name="TurnCounter" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource( 3 )
+
+[node name="Audio" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 10 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 13 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 7 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 11 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 12 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 6 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 9 )
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 10 )
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 8 )
+
+[node name="LabelPrinter" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource( 14 )

@@ -1,0 +1,75 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "ConfigData",
+"language": "GDScript",
+"path": "res://resource/configdata.gd"
+}, {
+"base": "Reference",
+"class": "GutHookScript",
+"language": "GDScript",
+"path": "res://addons/gut/hook_script.gd"
+}, {
+"base": "Node",
+"class": "GutTest",
+"language": "GDScript",
+"path": "res://addons/gut/test.gd"
+}, {
+"base": "Resource",
+"class": "Parameters",
+"language": "GDScript",
+"path": "res://resource/parameters.gd"
+} ]
+_global_script_class_icons={
+"ConfigData": "",
+"GutHookScript": "",
+"GutTest": "",
+"Parameters": ""
+}
+
+[application]
+
+config/name="n-back v0.1"
+run/main_scene="res://scenes/menu/menu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Configsaveload="*res://scenes/autoload/configsaveload.tscn"
+
+[display]
+
+window/size/borderless=true
+window/size/fullscreen=true
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/gut/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+theme/custom="res://new_theme.tres"
+
+[locale]
+
+test="fr"
+locale_filter=[ 0, [  ] ]
+translations=PoolStringArray( "res://assets/translations/translation.en.translation", "res://assets/translations/translation.fr.translation" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://resource/parameters.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+select_mode = {
+0: true,
+1: true,
+2: false
+}
+delay = 2.0
+max_turns = 20
+n = 2

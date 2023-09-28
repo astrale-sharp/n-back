@@ -1,0 +1,4 @@
+* add a stat printer and saver
+* better sound quality
+* warning for stupid parameters set
+* sound faster if time reduced

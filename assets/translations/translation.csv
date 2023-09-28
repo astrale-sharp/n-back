@@ -1,0 +1,52 @@
+keys,en,fr
+POS,Position,Position
+SOUND,Sound   ,Son     
+COLOR,Color   ,Couleur 
+ACC,Faster !,Plus vite !
+PARAM,Parameters,Paramètres
+HELP,Help,Aide
+DEMO,Demo,Démo
+FASTMODE,fast mode,mode rapide
+NUPMODE,N-up mode,mode n augmente
+HELPTEXT,"Welcomme to the N-back game (version 0.1) !
+
+In this game there is 8 rectangles that can be lit.
+
+If N = 1, you must click on the position button when a rectangle
+is lit and was lit the last turn!
+
+If N = 1, you must click on the position button when a rectangle
+is lit and was lit 2 turns ago!
+And so on...
+
+To add difficulty, there is the option to add sound and color on
+which you will have to do the same work.
+
+Good Luck !","Bienvenue sur le jeu du N-back (version 0.1) !
+
+Dans ce jeu, il y a 8 rectangles qui peuvent s'éclairer.
+
+Si N = 1, vous devez cliquer sur le bouton position
+dès qu'un rectangle s'éclaire et qu'il a été éclairé au dernier tour!
+
+Si N = 2, vous devez cliquer sur le bouton position
+dès qu'un rectangle s'éclaire et qu'il a été éclairé il y a deux tour!
+Et ainsi de suite…
+
+
+Pour corser l'exercice, on a l'option de rajouter un son et/ou une couleur
+sur lesquels on devra effectuer le même travail.
+
+Bonne chance!"
+TOOLTIPSAVEBUTTON,Will save the parameters for the mode specified on the right button.,Sauvegarde les paramètres pour le mode sélectionné sur le bouton de droite.
+SAVEAS,Save as …,Sauvegarder en tant que …
+DEMO_OPTION,Demo mode options,Options du mode démo
+FAST_OPTION,Fast mode options,Options du mode rapide
+NUP_OPTION,N up mode options,Options du mode n
+ALL_OPTION,All options,Toutes les options
+DELAY,Delay Time,Temps de délai
+TURNS,Number of turns,Nombre de tours
+TURN_REMAIN,Remaining Turns : ,Tours restants : 
+LANG,langage,langue
+RET_HOME_TOOLTIP,Click to return to main menu,Cliquer pour retourner au menu principal
+SAVE_BEF_EXIT,Click ok to save before returning to main menu,Cliquer sur ok pour sauvegarder avant de revenir au menu principal.
